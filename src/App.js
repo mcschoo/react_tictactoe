@@ -38,6 +38,7 @@ function Board({ xIsNext, squares, onPlay }) {
   // Creating the board - each squre recieves a "value" that will be either X, O, or null
   return (
     <>
+      <div className='status'>{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
         <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
