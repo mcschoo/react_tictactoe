@@ -7,9 +7,12 @@ and also learned a lot about implementing the observer pattern.
 What I learned/did with this project:
 - Initializing, updating, and rendering components
 - Improving the refactorability of my react code
+- Learning the importance of immutability in code
+- Manipulating the state of my components (setting the state, lifting the state up)
+
+Relatively Low-Level Techy Stuff (for the nerds):
 - Utilizing JSX elements
 - Implementing CSS classes
 - Passing data through props
 - Creating interactive components
 - Working with my local machine's browser console and dev tools
-- Manipulating the state of my components (setting the state, lifting the state up)
