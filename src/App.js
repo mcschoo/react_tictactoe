@@ -31,8 +31,8 @@ export default function Board() {
   * restore past states of the game
   */
   function handleClick(i) {
-    // Exception handling - return early if squares is not null
-    if(squares[i]) { return; }
+    // Exception handling - return early if squares is not null, or if player has won
+    if(squares[i] || calculateWinner(squares)) { return; }
 
     // Use JavaScript "slice" array method to create a copy of squares array
     const nextSquares = squares.slice();
@@ -44,6 +44,14 @@ export default function Board() {
     }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
+  }
+
+  const winner = calculateWinner(squares);
+  let status;
+  if(winner) {
+    status = 'Winner: ' + winner;
+  } else {
+    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
 
   // Creating the board - each squre recieves a "value" that will be either X, O, or null
