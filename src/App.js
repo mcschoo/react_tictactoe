@@ -12,24 +12,6 @@ function Square({value, onSquareClick}) {
 
 // Default function ("main") that creates our board
 function Board({ xIsNext, squares, onPlay }) {
-
-  /*
-  * Set the first move to X by default - we'll do this by adding another
-  * piece of state to the component
-  * 
-  * isNext is a boolean value correlating to players X and O - we'll flip it
-  * on each click, so in "handleClick"
-  */
-  //const [xIsNext, setXIsNext] = useState(true);
-
-  // Declare a const to create array of 9 nulls mapping to the 9 squares
-  //const [squares, setSquares] = useState(Array(9).fill(null));
-
-  /* 
-  * Implement handleClick function inside our board component so we can update the squares array
-  * This ensures immutability in the code so we can implement things like a "time travel" feature to
-  * restore past states of the game
-  */
   function handleClick(i) {
     // Exception handling - return early if squares is not null, or if player has won
     if(squares[i] || calculateWinner(squares)) { return; }
@@ -54,7 +36,6 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   // Creating the board - each squre recieves a "value" that will be either X, O, or null
-  // This looks extremely for loop-able, look into it
   return (
     <>
       <div className="board-row">
