@@ -8,25 +8,6 @@ function Square({value, onSquareClick}) {
       {value}
     </button>
   );
-  /*
-  // Declare const to use as opposed to previous argument. Value begins equal to null
-  const [value, setValue] = useState(null);
-
-  // On-click command
-  function handleClick() {
-    setValue('X');
-  }
-
-  return (
-    <button 
-      // Observer, into callback
-      className="square"
-      onClick={handleClick}
-    >
-      {value}
-    </button>
-  )
-  */
 }
 
 // Default function ("main") that creates our board
