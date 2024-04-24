@@ -13,6 +13,15 @@ function Square({value, onSquareClick}) {
 // Default function ("main") that creates our board
 export default function Board() {
 
+  /*
+  * Set the first move to X by default - we'll do this by adding another
+  * piece of state to the component
+  * 
+  * isNext is a boolean value correlating to players X and O - we'll flip it
+  * on each click, so in "handleClick"
+  */
+  const [xIsNext, setXIsNext] = useState(true);
+
   // Declare a const to create array of 9 nulls mapping to the 9 squares
   cosnt [squares, setSquares] = useState(Array(9).fill(null));
 
@@ -25,8 +34,13 @@ export default function Board() {
     // Use JavaScript "slice" array method to create a copy of squares array
     const nextSquares = squares.slice();
     // Update "nextSquares" to add X to the first square, then call setSquares to let React know component state has changed
-    nextSquares[i] = 'X';
+    if(isNext) {
+      nextSquares[i] = 'X';
+    } else {
+      nextSquares[i] = 'O';
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   // Creating the board - each squre recieves a "value" that will be either X, O, or null
