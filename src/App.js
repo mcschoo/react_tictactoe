@@ -16,12 +16,16 @@ export default function Board() {
   // Declare a const to create array of 9 nulls mapping to the 9 squares
   cosnt [squares, setSquares] = useState(Array(9).fill(null));
 
-  // Implement handleClick function inside our board component so we can update the squares array
+  /* 
+  * Implement handleClick function inside our board component so we can update the squares array
+  * This ensures immutability in the code so we can implement things like a "time travel" feature to
+  * restore past states of the game
+  */
   function handleClick(i) {
     // Use JavaScript "slice" array method to create a copy of squares array
     const nextSquares = squares.slice();
     // Update "nextSquares" to add X to the first square, then call setSquares to let React know component state has changed
-    nextSquares[i] = "X";
+    nextSquares[i] = 'X';
     setSquares(nextSquares);
   }
 
