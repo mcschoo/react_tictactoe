@@ -4,7 +4,7 @@ Through this process, I installed various software on my own local system includ
 to ensure that a newly installed compiler correctly points to vs code. I learned how to use React DevTools through both my local machine and CodeSandbox,
 and also learned a lot about implementing the observer pattern. 
 
-Methods I utilized in React:
+What I learned/did with this project:
 - Initializing, updating, and rendering components
 - Improving the refactorability of my react code
 - Utilizing JSX elements
