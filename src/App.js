@@ -1,13 +1,12 @@
+// Importing libraries from react framework
 import { useState } from 'react';
 
 // Template function for the individual board tiles
-// Takes argument "value" and sets it as the tile index
 function Square() {
-  // Declare const to use as opposed to previous argument
-  // Value begins equal to null
+  // Declare const to use as opposed to previous argument. Value begins equal to null
   const [value, setValue] = useState(null);
 
-  // Declare function within a function
+  // On-click command
   function handleClick() {
     setValue('X');
   }
@@ -21,9 +20,6 @@ function Square() {
       {value}
     </button>
   )
-  
-  // Previous template for button: 
-  // return <button className="square">{value}</button>;
 }
 
 // Default function ("main") that creates our board
