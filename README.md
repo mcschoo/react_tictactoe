@@ -6,7 +6,7 @@ and also learned a lot about implementing the observer pattern.
 
 Methods I utilized in React:
 - Initializing, updating, and rendering components
-- Making my react code more abstract/applicable
+- Improving the refactorability of my react code
 - Utilizing JSX elements
 - Implementing CSS classes
 - Passing data through props
