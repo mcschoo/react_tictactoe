@@ -4,7 +4,7 @@ import { useState } from 'react';
 // Template function for the individual board tiles
 function Square({value, onSquareClick}) {
   return (
-    <button className='square' onClick={onSquareClick}>
+    <button className="square" onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -23,7 +23,7 @@ export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
 
   // Declare a const to create array of 9 nulls mapping to the 9 squares
-  cosnt [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState(Array(9).fill(null));
 
   /* 
   * Implement handleClick function inside our board component so we can update the squares array
@@ -34,7 +34,7 @@ export default function Board() {
     // Use JavaScript "slice" array method to create a copy of squares array
     const nextSquares = squares.slice();
     // Update "nextSquares" to add X to the first square, then call setSquares to let React know component state has changed
-    if(isNext) {
+    if(xIsNext) {
       nextSquares[i] = 'X';
     } else {
       nextSquares[i] = 'O';
