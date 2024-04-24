@@ -2,8 +2,12 @@
 import { useState } from 'react';
 
 // Template function for the individual board tiles
-function Square({value}) {
-  return <button className='square'>{value}</button>;
+function Square({value, onSquareClick}) {
+  return (
+    <button className='square' onClick={onSquareClick}>
+      {value}
+    </button>
+  );
   /*
   // Declare const to use as opposed to previous argument. Value begins equal to null
   const [value, setValue] = useState(null);
