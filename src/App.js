@@ -31,6 +31,9 @@ export default function Board() {
   * restore past states of the game
   */
   function handleClick(i) {
+    // Exception handling - return early if squares is not null
+    if(squares[i]) { return; }
+
     // Use JavaScript "slice" array method to create a copy of squares array
     const nextSquares = squares.slice();
     // Update "nextSquares" to add X to the first square, then call setSquares to let React know component state has changed
